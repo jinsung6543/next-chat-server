@@ -31,9 +31,7 @@ const getUser = (id) => users.find((user) => user.id === id);
 const getUsersInRoom = (room) => users.filter((user) => user.room === room);
 
 const getOtherUsersInRoom = (id, room) => {
-  console.log('current user: ', id);
   const result = users.filter((user) => user.room === room && user.id !== id);
-  console.log('otherUsers: ', result);
   return result;
 };
 
